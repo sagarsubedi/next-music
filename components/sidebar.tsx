@@ -20,39 +20,39 @@ import {
 const navMenu = [
     {
         name: 'Home',
-        icon : MdHome,
-        route : '/'
+        icon: MdHome,
+        route: '/'
     },
     {
         name: 'Search',
-        icon : MdSearch,
-        route : '/search'
-    },    {
+        icon: MdSearch,
+        route: '/search'
+    }, {
         name: 'Your Library',
-        icon : MdLibraryMusic,
-        route : '/library'
+        icon: MdLibraryMusic,
+        route: '/library'
     }
 ];
 
 const musicMenu = [
     {
-        name : 'Create Playlist',
-        icon : MdPlaylistAdd,
-        route : '/',
+        name: 'Create Playlist',
+        icon: MdPlaylistAdd,
+        route: '/',
     },
     {
-        name : 'Favorites',
-        icon : MdFavorite,
-        route : '/favorites',
+        name: 'Favorites',
+        icon: MdFavorite,
+        route: '/favorites',
     },
 ];
 
-const playlists = new Array(10).fill(1).map((_, i) => `Playlist ${i+1}`);
+const playlists = new Array(10).fill(1).map((_, i) => `Playlist ${i + 1}`);
 
 
 const Sidebar = () => {
     return (
-        <Box 
+        <Box
             width="100%"
             height="calc(100vh - 100px)"
             bg="black"
@@ -75,7 +75,7 @@ const Sidebar = () => {
                                             <ListIcon as={menuItem.icon} color="white" marginRight="20px" />
                                             {menuItem.name}
                                         </LinkOverlay>
-                                    </NextLink> 
+                                    </NextLink>
                                 </LinkBox>
                             </ListItem>
                         ))}
@@ -92,7 +92,7 @@ const Sidebar = () => {
                                             <ListIcon as={musicMenuItem.icon} color="white" marginRight="20px" />
                                             {musicMenuItem.name}
                                         </LinkOverlay>
-                                    </NextLink> 
+                                    </NextLink>
                                 </LinkBox>
                             </ListItem>
                         ))}
@@ -103,16 +103,16 @@ const Sidebar = () => {
 
                 <Box height="66%" overflowY="auto" paddingY="20px">
                     <List spacing={2}>
-                    {playlists.map((playlist) => (
-                        <ListItem paddingX="20px" key={playlist}>
-                            <LinkBox>
-                                <NextLink href="/" passHref>
-                                    <LinkOverlay>
-                                        {playlist}
-                                    </LinkOverlay>
-                                </NextLink>
-                            </LinkBox>
-                        </ListItem>
+                        {playlists.map((playlist) => (
+                            <ListItem paddingX="20px" key={playlist}>
+                                <LinkBox>
+                                    <NextLink href="/" passHref>
+                                        <LinkOverlay>
+                                            {playlist}
+                                        </LinkOverlay>
+                                    </NextLink>
+                                </LinkBox>
+                            </ListItem>
                         ))}
                     </List>
                 </Box>
