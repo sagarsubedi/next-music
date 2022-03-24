@@ -1,6 +1,5 @@
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import { usePlaylist } from '../lib/hooks';
 import {
     Box,
     ListIcon,
@@ -17,6 +16,8 @@ import {
     MdPlaylistAdd,
     MdFavorite
 } from 'react-icons/md';
+import { usePlaylist } from '../lib/hooks';
+
 
 const navMenu = [
     {
