@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import { Box, Flex, Input, Button } from '@chakra-ui/react';
-import { Spacer } from '@chakra-ui/layout';
+import { Spacer, Text } from '@chakra-ui/layout';
 import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 // import { useSWRConfig } from 'swr';
@@ -38,7 +38,13 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
                 <NextImage src="/logo.svg" height={60} width={120} />
             </Flex>
 
-            <Flex justify="center" align="center" height="calc(100vh - 100px)">
+            <Flex direction="column" justify="center" align="center" height="100px" color="white">
+                <Text>You can use the following credential to log in:</Text>
+                <Text>user@test.com</Text>
+                <Text>password</Text>
+            </Flex>
+
+            <Flex justify="center" align="center" height="calc(100vh - 400px)">
                 <Box padding="50px" bg="gray.900" borderRadius="5px">
                     <form onSubmit={handleSubmit}>
                         <Input placeholder="Email" type="email" marginBottom="20px" name='email'
