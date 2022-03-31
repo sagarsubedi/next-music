@@ -206,7 +206,7 @@ const Player = ({ songs, activeSong }) => {
                             aria-label={['min', 'max']}
                             step={0.1}
                             min={0}
-                            max={duration ? duration.toFixed(2) : 0}
+                            max={duration ? (duration.toFixed(2) as unknown as number) : 0}
                             id="player-range"
                             onChange={onSeek}
                             // range slider wants an array
@@ -226,9 +226,9 @@ const Player = ({ songs, activeSong }) => {
                     </Box>
 
                 </Flex>
-            </Box>
+            </Box >
 
-        </Box>
+        </Box >
     )
 }
 
